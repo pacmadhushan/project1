@@ -240,3 +240,48 @@ footer>.row .container .col:last-child{
     color: white;
     background-color: rgb(4, 4, 4);
 }
+
+main #container{
+    /* background-color:rgb(31, 52, 210) ; */
+    padding: 20px 10px 0;
+    height: 100%;
+}
+
+main #container>#main-col1{
+    /* background-color: lightcoral; */
+    width: 75%;
+    float: left;
+    height: 90px;
+}
+
+main #container>#main-col2{
+    /* background-color: rgb(58, 184, 182); */
+    width: 25%;
+    float: right;
+    height: 90px;
+}
+
+main #container>#main-col1>ul>li{
+    /* background-color: #736464; */
+    width: 20%;
+    padding: 10px 40px;
+    float: left;
+}
+
+main #container>#main-col1>ul>li{
+    text-align: right;
+}
+main #container>#main-col1>ul li a{
+    display: inline-block;
+}
+
+.country-code{
+    padding: 10px;
+    display: block;
+    text-align: center;
+}
+
+h3{
+    font-size: 1.1rem;
+}
+
