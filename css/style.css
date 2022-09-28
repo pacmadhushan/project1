@@ -6,9 +6,20 @@
     font-family: 'Lato', sans-serif;
 }
 
-.clear-fix{
+.clearfix{
     clear: both;
+
 }
+.clearfix::after{
+    display: block;
+    content :" ";
+    clear: both ;
+}
+
+/* body{
+    width: 1170px;
+    margin: auto;
+} */
 
 h1{
     font-size: 1.8rem;
@@ -41,102 +52,191 @@ h6{
     line-height: 1.1rem
 }
 
-/* Layout */
-
-
-/* .container{
-    width: 1170px;
-} */
-
-main{
-    background-color: blueviolet;
-}
-
-footer{
-    background-color: darkcyan;
-}
-.container{
-    overflow: hidden;
-    width: 1170px;
-}
-nav,ul{
-    overflow: hidden;
-}
-
-/* Header */
+/* LAYOUT */
 
 #top-row{
-   
-    padding: 10px 0;
+    background-color: aqua;
+    width: 1170px;
     height: 80px;
-    
-}
+    margin: 0 auto;
 
-#top-row>.container{
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-#top-row>.container>div{
-    float: right;
-}
-
-#top-row>.container>img{
-    float: left;
-}
-
-#nav-row{
-    background-color: darkolivegreen;
-}
-
-#h3-row{
-    background-color: fuchsia;
 }
 
 #logo{
-    /* right: 100px; */
-    /* left: 10px; */
+    float: left;
+    height: 60px;
+   margin-top: 10px;
+   margin-left: 10px;
+}
+
+#nav-row{
+    background-color: #231f20;
     height: 80px;
-    padding : 15px;
-    padding-bottom: 5;
+    padding: 50px;
+}
+
+#last-row{
+    background-color: darkgoldenrod;
+}
+
+#icons{
+    padding-top: 10px;
+    float: right;
+    width: 70%;
     
 }
 
-nav li{
-    cursor: pointer;
+#icons>div:first-child{
+    height: 30px;
+    /* float: right; */
+    background-color:rebeccapurple;
 }
 
-nav li:hover{
+#icons>div:last-child{
+    height: 30px;
+    /* float: right; */
+    background-color: rgb(37, 180, 113);
+}
+
+#icons>div>li{
+    color: #1f1f1f;
+    padding: 5px 20px;
+    float: right;
+    list-style-type: none;
+}
+
+#icons>div>li a:hover{
+    color: yellow;
+    text-decoration: underline;
+
+}
+
+#icons>div>div {
+    float: left;
+    padding: 2px 10px;
+}
+
+#icons>div>div a{
+    color: #1f1f1f;
+    text-decoration: none;
+}
+
+#icons>div>div a:hover{
+    color: yellow;
     text-decoration: underline;
 }
 
-#nav-lang li{
+#nav-row{
+    height: 0px;
+}
+
+#nav-row>li {
+    list-style-type: none;
     float: left;
-    padding: 10px 10px;
-    font-size: 0.8rem;
+    padding-bottom: 0px;
+}
+
+#nav-row>li>a{
+    display: inline-block;
+    color: white;
+    padding: 10px 15px;
+}
+
+#nav-row>li>a::after{
+    position: absolute;
+    display: block;
+    content: "";
+    border-top: 6px solid rgb(29, 44, 181);
+    border-left: 6px solid red;
+    border-right: 6px solid yellow;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
 
 }
 
-#nav-lang li:hover{
-    color: #ff9d1e;
+#nav-row>li>a:hover{
+    color: yellow;
+    background-color: orange;
 }
 
-#main-nav li{
-    float: left;
-    padding: 10px 20px;
-    font-size: 0.8rem;
-  padding: 20px 20px 0px;
+#arrow{
+    background-color: crimson;
 }
 
-#main-nav{
-    float: left;
+#btns{
+    text-align: right;
+    padding: 4px;
 }
 
-#smi-icon li{
-    float: left;
-    padding: 5px;
+#last-row{
     background-color: yellow;
-    margin-left: 10px;
+    
 }
 
+.btn{
+    display: inline-block;
+    color: white;
+    border-radius: 4px;
+    border: 2px solid;
+    border: none;
+    /* border-color: black; */
+    border-bottom: 2px solid #0f027b;
+    height: 40px;
+    background-color: #107ece;
+    text-transform: uppercase;
+    line-height: 40px;
+    text-decoration: none;
+    font-size: 00.8rem;
+}
+
+.btn:hover{
+    color: red;
+}
+
+/* Footer */
+
+footer .row{
+    background-color: #107ece;
+}
+
+footer>#copy-right-row{
+    background-color: rgb(21, 182, 21);
+}
+
+#copy-right-row>.container{
+
+    padding: 16px 0;
+    color: #1f1f1f;
+    font-size: 0.7rem;
+    text-align: center;
+
+}
+
+footer>.row .container .col{
+    background-color: brown;
+    height: 215px;
+    padding-top: 10px;
+    width: 25%;
+    float: left;
+
+}
+
+footer>.row .container .col:first-child{
+    color: white;
+    background-color: #333;
+}
+
+footer>.row .container .col:nth-child(2){
+    color: white;
+    background-color: #333;
+}
+
+footer>.row .container .col:nth-child(3){
+    color: white;
+    background-color: #333;
+}
+footer>.row .container .col:last-child{
+    color: white;
+    background-color: rgb(4, 4, 4);
+}
